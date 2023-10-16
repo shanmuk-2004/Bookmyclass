@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Classroom Booking</title>
+  <style>
+    header {
+      background-color: transparent;
+      color: black;
+      animation: bounce 1s;
+      text-align: center;
+    }
+
+    @keyframes bounce {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      color: black;
+      animation: bounce 1s;
+      text-align: center;
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(10px);
+      }
+    }
+
+    form {
+      background-color: #fff;
+      padding: 10px;
+      animation: bounce 1s;
+      text-align: left;
+    }
+
+    input, select {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: #000;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Center the logo */
+    header img {
+      display: block; /* Make the image a block element */
+      margin: 0 auto;
+      max-width: 200px;
+      max-height: 200px;
+    }
+    body {
+      font-family:impact, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/St._Mary%27s_College_Logo.svg/440px-St._Mary%27s_College_Logo.svg.png" alt="St. Mary's College logo">
+  </header>
+
+  <h1>Classroom Booking</h1>
+  <form action="booking_process" method="post">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="Admission_Id">Admission Id:</label> <!-- Changed 'text' to 'Admission Id' for the label -->
+    <input type="text" id="Admission_Id" name="Admission_Id" required><br>
+
+    <label for="room">Select room:</label>
+    <select id="room" name="room" required>
+      <option value="room1">Lab 1</option> <!-- Removed underscores from room names for consistency -->
+      <option value="room2">Lab 2</option>
+      <option value="room3">Theatrix</option>
+      <option value="room4">Cafeteria</option>
+      <option value="room5">Digital Room</option>
+    </select><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    <label for="time">Time Slot:</label>
+    <input type="time" id="time" name="time" required><br>
+
+    <input type="submit" value="Book">
+  </form>
+</body>
+</html>
